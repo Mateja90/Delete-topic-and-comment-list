@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Comment list{% endblock title%}
+
+{% block content %}
+
+  {%for i in commentList%}
+      <p>{{i.content}}</p>
+
+  {% endfor %}
+
+{ % endblock content %}
