@@ -41,6 +41,6 @@ class TopicDeleteHandler(BaseHandler):
         user=users.get_current_user()
 
         if topic.author_email == user.email() or users.is_current_user_admin():
-            Topic.delete(topic=topic)
+            topic.key.delete()
 
         return self.redirect_to("main-page")

@@ -18,7 +18,7 @@
                 {% if user %}
                  {% if topic.author_email == user.email()  or user.admin%}
                   <form action="/topic/{{topic.key.id()}}/delete" method=post>
-                    <input type=hidden name="csrf_token" velue="{{csrf_token}}">
+                    <input type=hidden name="csrf_token" value="{{csrf_token}}">
                       <button type="submit">Delete topic</button>
                   </form>
                   {%endif%}
